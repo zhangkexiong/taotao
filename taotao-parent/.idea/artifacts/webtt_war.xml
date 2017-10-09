@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="webtt:war">
+    <output-path>$PROJECT_DIR$/../webtt/target</output-path>
+    <root id="archive" name="webtt.war">
+      <element id="artifact" artifact-name="webtt:war exploded" />
+    </root>
+  </artifact>
+</component>
