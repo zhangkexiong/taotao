@@ -1,13 +1,11 @@
 package com.taotao.controller;
 
+import com.taotao.common.pojo.EasyUIDataGridResult;
 import com.taotao.pojo.TbItem;
 import com.taotao.service.ItemService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @Author: Small Bear
@@ -19,16 +17,19 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class ItemController {
     @Autowired
     private ItemService itemService;
-    @RequestMapping(value = "/item/{id}")
+
+    @RequestMapping(value = "/item/{itemId}")
     @ResponseBody
-    public TbItem getItemsById(@PathVariable Long id){
-        System.out.println(id);
-        TbItem tbItem=itemService.getItemById(id);
+    public TbItem getItemsById(@PathVariable Long itemId) {
+        System.out.println(itemId);
+        TbItem tbItem = itemService.getItemById(itemId);
         return tbItem;
     }
-    @RequestMapping("/item")
+
+    @RequestMapping(value = "/item/list")
     @ResponseBody
-    public String getString(){
-        return "aa";
+    public EasyUIDataGridResult getItemList(Integer page, Integer rows) {
+        EasyUIDataGridResult result = itemService.getItemList(page, rows);
+        return result;
     }
 }
