@@ -1,0 +1,4 @@
+com\taotao\controller\ItemController.class
+com\taotao\utils\FastDFSClient.class
+com\taotao\controller\ImageController.class
+com\taotao\controller\PageController.class

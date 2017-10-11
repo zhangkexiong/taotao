@@ -1,0 +1,7 @@
+#surefire
+#Wed Oct 11 22:00:55 CST 2017
+user.dir=G\:\\taotao\\taotao-manager-service
+maven.repo.local=E\:\\maven\\repository
+idea.version=2017.2.1
+localRepository=E\:\\maven\\repository
+basedir=G\:\\taotao\\taotao-manager-service
