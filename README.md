@@ -4,3 +4,4 @@ spring
 mybatis
 springMVC
 dubbo
+solr
